@@ -17,5 +17,7 @@ public class HelloWorldRestController {
 		long y = Math.round(Math.random() * 10);
 		return x+" + "+y+" = " + (x+y);
 	}
+	
+	//Vezba
 
 }
