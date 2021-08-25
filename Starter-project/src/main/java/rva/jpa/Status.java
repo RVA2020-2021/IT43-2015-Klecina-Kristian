@@ -30,7 +30,7 @@ public class Status implements Serializable {
 
 	//bi-directional many-to-one association to Student
 	@JsonIgnore
-	@OneToMany(mappedBy="status")
+	@OneToMany(mappedBy="status", cascade = {CascadeType.DETACH, CascadeType.REMOVE})
 	private List<Student> students;
 
 	public Status() {

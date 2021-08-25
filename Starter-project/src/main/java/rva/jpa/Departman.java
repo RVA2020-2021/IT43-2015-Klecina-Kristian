@@ -35,7 +35,7 @@ public class Departman implements Serializable {
 
 	//bi-directional many-to-one association to Student
 	@JsonIgnore
-	@OneToMany(mappedBy="departman")
+	@OneToMany(mappedBy="departman", cascade = {CascadeType.DETACH, CascadeType.REMOVE})
 	private List<Student> students;
 
 	public Departman() {
